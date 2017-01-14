@@ -1,0 +1,16 @@
+@import 'ember-paper';
+@import 'form';
+
+.main-app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.alert-success {
+  height: 20px;
+  background-color: green;
+  color: white;
+  text-align: center;
+}

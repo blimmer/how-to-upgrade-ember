@@ -1,0 +1,21 @@
+{{!-- http://offirgolan.github.io/ember-cp-validations/ --}}
+<div data-test-input-for="{{valuePath}}" class='form-group'>
+  {{input type=type value=value placeholder=placeholder class='form-control' name=valuePath}}
+  {{#if isValid}}
+    <span data-test-valid class='valid-input fa fa-check'></span>
+  {{/if}}
+
+  <div class='input-error'>
+    {{#if showErrorMessage}}
+      <div data-test-invalid class='error'>
+        {{v-get model valuePath 'message'}}
+      </div>
+    {{/if}}
+
+    {{#if showWarningMessage}}
+      <div class='warning'>
+        {{v-get model valuePath 'warningMessage'}}
+      </div>
+    {{/if}}
+  </div>
+</div>

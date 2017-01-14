@@ -1,0 +1,12 @@
+<h1 data-test-form-header>Form things!</h1>
+
+<form data-test-form>
+  {{form-input placeholder="Name" model=model valuePath='name'}}
+  {{form-input placeholder="Email" model=model valuePath='email'}}
+  {{form-input type="password" placeholder="Password" model=model valuePath='password'}}
+
+  {{#paper-button
+      raised=true
+      disabled=(v-get model 'isInvalid')
+      onClick='showSuccessFlash'}}Clicky{{/paper-button}}
+</form>

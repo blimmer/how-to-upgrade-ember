@@ -1,0 +1,92 @@
+/* https://raw.githubusercontent.com/offirgolan/ember-cp-validations/master/tests/dummy/app/styles/form.less */
+
+form {
+  text-align: center;
+  position: relative;
+  background: #ffffff;
+  width: 485px;
+  padding: 40px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+  align-self: center;
+}
+
+form input {
+  outline: none;
+  display: block;
+  height: 35px;
+  width: 100%;
+  padding: 0 15px;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  color: #6E6E6E;
+  -webkti-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.3s linear 0s;
+  box-shadow: none;
+}
+
+form .form-group {
+  margin: 0 0 20px;
+}
+
+.has-error .form-control:focus,
+.has-success .form-control:focus {
+  box-shadow: none;
+}
+
+.has-error .form-control:focus {
+  border-color: tomato;
+}
+
+.has-success .form-control:focus {
+  border-color: rgb(31, 187, 20);
+}
+
+.has-success .form-control,
+.has-error .form-control {
+  border-color: #d9d9d9;
+}
+
+input.form-control:focus {
+  color: #333333;
+  border-color: #b9b9b9;
+  outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.validated-input {
+  position: relative;
+}
+
+.validated-input .valid-input {
+  position: absolute;
+  right: 15px;
+  top: 11px;
+  font-size: 12px;
+  color: #646262;
+}
+
+.validated-input .input-error {
+  font-size: 12px;
+}
+
+.validated-input .input-error .error,
+.validated-input .input-error .warning {
+  padding: 8px 5px 0 0;
+  text-align: left;
+}
+
+.validated-input .input-error .error {
+  color: rgb(255, 65, 31);
+}
+
+.validated-input .input-error .warning {
+  color: rgb(255, 165, 31);
+}
