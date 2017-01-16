@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 import { validator, buildValidations } from 'ember-cp-validations';
 
@@ -14,10 +15,9 @@ const Validations = buildValidations({
     validator('format', {
       regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$/,
       message: 'Your password must include at least one upper case letter, one lower case letter, and a number',
-      description(model) {
-        // heh why would you do this IRL?
-        return `Password for ${model.get('name')}`;
-      }
+      description: Ember.computed('model.name', function() {
+        return `Password for ${this.get('model.name')}`;
+      }),
     })
   ]
 });
